@@ -1,0 +1,16 @@
+#!/bin/bash
+# =================================================================
+# LABORATORIO PRACTICO BASH - SIMULADOR DE APAGADO PROGRAMADO
+# Esta función simula el comando shutdown, mostrando la hora y mensaje.
+# =================================================================
+
+echo "ADVERTENCIA: Estás a punto de apagar el sistema."
+read -p "¿Estás seguro de que quieres apagar ahora? (s/n): " confirmacion
+
+if [[ "$confirmacion" == "s" || "$confirmacion" == "S" ]]; then
+    echo "=> Acción solicitada: APAGADO INMEDIATO."
+    echo "=> Comando simulado: sudo shutdown -h now"
+    echo "=> Estado: El sistema SIMULARÍA el cierre de procesos y se apagaría."
+else
+    echo "Apagado cancelado."
+fi
